@@ -1,0 +1,168 @@
+{
+  "contractName": "IBigNumbers",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IBigNumbers.sol\":\"IBigNumbers\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IBigNumbers.sol\":{\"keccak256\":\"0xa335988f2d515d2ae8e798355b23e2fa6aef75272ac9186592e6e648abc6617f\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://c697935c87f825362eb4960f64cc2cf7b1b98e53f26192ecea857ff16df13e3f\",\"dweb:/ipfs/QmfDTHz3riSqzVwaWKuJkqbinfxya783WYPnL8uhrbFePb\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: Unlicense\r\npragma solidity 0.8.17;\r\n\r\ninterface IBigNumbers {\r\n    // TODO create storage friendly version (pack/unpack bool and bitlen into one word)\r\n    struct BigNumber { \r\n        bytes val;\r\n        bool neg;\r\n        uint bitlen;\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\Claudio\\Desktop\\Codice\\Peer Nomination\\contracts\\IBigNumbers.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/IBigNumbers.sol",
+    "exportedSymbols": {
+      "IBigNumbers": [
+        3312
+      ]
+    },
+    "id": 3313,
+    "license": "Unlicense",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3304,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IBigNumbers",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 3312,
+        "linearizedBaseContracts": [
+          3312
+        ],
+        "name": "IBigNumbers",
+        "nameLocation": "76:11:3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IBigNumbers.BigNumber",
+            "id": 3311,
+            "members": [
+              {
+                "constant": false,
+                "id": 3306,
+                "mutability": "mutable",
+                "name": "val",
+                "nameLocation": "219:3:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 3311,
+                "src": "213:9:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 3305,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "213:5:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3308,
+                "mutability": "mutable",
+                "name": "neg",
+                "nameLocation": "238:3:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 3311,
+                "src": "233:8:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 3307,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "233:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 3310,
+                "mutability": "mutable",
+                "name": "bitlen",
+                "nameLocation": "257:6:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 3311,
+                "src": "252:11:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 3309,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "252:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "BigNumber",
+            "nameLocation": "191:9:3",
+            "nodeType": "StructDefinition",
+            "scope": 3312,
+            "src": "184:87:3",
+            "visibility": "public"
+          }
+        ],
+        "scope": 3313,
+        "src": "66:208:3",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:235:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2023-01-06T18:13:45.991Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

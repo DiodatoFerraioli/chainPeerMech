@@ -1,0 +1,1325 @@
+{
+  "contractName": "Protocol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "nodeId",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "cypher",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "insert_encrypted_matrix",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "nodeId",
+          "type": "address"
+        }
+      ],
+      "name": "get_encrypted_matrix",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "cypher",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "insert_proof",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "get_proof",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"nodeId\",\"type\":\"address\"}],\"name\":\"get_encrypted_matrix\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"cypher\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"get_proof\",\"outputs\":[],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"nodeId\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"cypher\",\"type\":\"uint256[]\"}],\"name\":\"insert_encrypted_matrix\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"insert_proof\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Protocol.sol\":\"Protocol\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Protocol.sol\":{\"keccak256\":\"0x4ea014fbd7b92d2ac02821efbc15f5cb02def329e5374f31ff32ebcd0948ca45\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://71a97a47468d37cd043b932679f7f30a84252fb7ed5ffae775b5d95e85b5bc98\",\"dweb:/ipfs/QmQwPKVQbxLziRM6eHhPn1JngYzAQL2KC4pehFNR6RCF9a\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506102cc806100206000396000f3fe608060405234801561001057600080fd5b5060043610610068577c010000000000000000000000000000000000000000000000000000000060003504631a56bbb3811461006d57806370372632146100fc578063c52cdaaa146100fc578063d318227814610104575b600080fd5b6100fa6004803603604081101561008357600080fd5b73ffffffffffffffffffffffffffffffffffffffff82351691908101906040810160208201356401000000008111156100bb57600080fd5b8201836020820111156100cd57600080fd5b803590602001918460208302840111640100000000831117156100ef57600080fd5b509092509050610187565b005b6100fa6101bd565b6101376004803603602081101561011a57600080fd5b503573ffffffffffffffffffffffffffffffffffffffff166101bf565b60408051602080825283518183015283519192839290830191858101910280838360005b8381101561017357818101518382015260200161015b565b505050509050019250505060405180910390f35b73ffffffffffffffffffffffffffffffffffffffff831660009081526020819052604090206101b7908383610236565b50505050565b565b73ffffffffffffffffffffffffffffffffffffffff81166000908152602081815260409182902080548351818402810184019094528084526060939283018282801561022a57602002820191906000526020600020905b815481526020019060010190808311610216575b50505050509050919050565b828054828255906000526020600020908101928215610271579160200282015b82811115610271578235825591602001919060010190610256565b5061027d929150610281565b5090565b5b8082111561027d576000815560010161028256fea26469706673582212209d4e146b3b05d17f772c59e008009de5c9685f30168bf9800644c4b2201266f864736f6c634300060c0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b5060043610610068577c010000000000000000000000000000000000000000000000000000000060003504631a56bbb3811461006d57806370372632146100fc578063c52cdaaa146100fc578063d318227814610104575b600080fd5b6100fa6004803603604081101561008357600080fd5b73ffffffffffffffffffffffffffffffffffffffff82351691908101906040810160208201356401000000008111156100bb57600080fd5b8201836020820111156100cd57600080fd5b803590602001918460208302840111640100000000831117156100ef57600080fd5b509092509050610187565b005b6100fa6101bd565b6101376004803603602081101561011a57600080fd5b503573ffffffffffffffffffffffffffffffffffffffff166101bf565b60408051602080825283518183015283519192839290830191858101910280838360005b8381101561017357818101518382015260200161015b565b505050509050019250505060405180910390f35b73ffffffffffffffffffffffffffffffffffffffff831660009081526020819052604090206101b7908383610236565b50505050565b565b73ffffffffffffffffffffffffffffffffffffffff81166000908152602081815260409182902080548351818402810184019094528084526060939283018282801561022a57602002820191906000526020600020905b815481526020019060010190808311610216575b50505050509050919050565b828054828255906000526020600020908101928215610271579160200282015b82811115610271578235825591602001919060010190610256565b5061027d929150610281565b5090565b5b8082111561027d576000815560010161028256fea26469706673582212209d4e146b3b05d17f772c59e008009de5c9685f30168bf9800644c4b2201266f864736f6c634300060c0033",
+  "immutableReferences": {},
+  "sourceMap": "69:497:28:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "69:497:28:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;196:125;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;196:125:28;;-1:-1:-1;196:125:28;-1:-1:-1;196:125:28;:::i;:::-;;469:41;;;:::i;329:132::-;;;;;;;;;;;;;;;;-1:-1:-1;329:132:28;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;196:125;287:15;;;:7;:15;;;;;;;;;;:26;;307:6;;287:26;:::i;:::-;;196:125;;;:::o;469:41::-;:::o;329:132::-;436:15;;;:7;:15;;;;;;;;;;;;429:24;;;;;;;;;;;;;;;;;396:20;;429:24;;;436:15;429:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;329:132;;;:::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract Protocol {\r\n\r\n    struct CypherText {\r\n        uint[] c;\r\n    }\r\n\r\n    mapping(address => CypherText) mapNode;\r\n\r\n    function insert_encrypted_matrix(address nodeId, uint[] calldata cypher) public {\r\n        mapNode[nodeId].c = cypher;\r\n    }\r\n\r\n    function get_encrypted_matrix(address nodeId) public view returns (uint[] memory cypher) {\r\n        return mapNode[nodeId].c;\r\n    }\r\n\r\n    function insert_proof() public {\r\n\r\n    }\r\n\r\n    function get_proof() public view {\r\n\r\n    }\r\n\r\n}",
+  "sourcePath": "C:\\Users\\Claudio\\Desktop\\Tesi 03-08-2022\\Codice reviews\\reviews1\\contracts\\Protocol.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Protocol.sol",
+    "exportedSymbols": {
+      "Protocol": [
+        8034
+      ]
+    },
+    "id": 8035,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7987,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:28"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 8034,
+        "linearizedBaseContracts": [
+          8034
+        ],
+        "name": "Protocol",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Protocol.CypherText",
+            "id": 7991,
+            "members": [
+              {
+                "constant": false,
+                "id": 7990,
+                "mutability": "mutable",
+                "name": "c",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 7991,
+                "src": "125:8:28",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 7988,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "125:4:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 7989,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "125:6:28",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "CypherText",
+            "nodeType": "StructDefinition",
+            "scope": 8034,
+            "src": "96:45:28",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7995,
+            "mutability": "mutable",
+            "name": "mapNode",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 8034,
+            "src": "149:38:28",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CypherText_$7991_storage_$",
+              "typeString": "mapping(address => struct Protocol.CypherText)"
+            },
+            "typeName": {
+              "id": 7994,
+              "keyType": {
+                "id": 7992,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "157:7:28",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "149:30:28",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CypherText_$7991_storage_$",
+                "typeString": "mapping(address => struct Protocol.CypherText)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 7993,
+                "name": "CypherText",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 7991,
+                "src": "168:10:28",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_CypherText_$7991_storage_ptr",
+                  "typeString": "struct Protocol.CypherText"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 8010,
+              "nodeType": "Block",
+              "src": "276:45:28",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 8008,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 8003,
+                          "name": "mapNode",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7995,
+                          "src": "287:7:28",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CypherText_$7991_storage_$",
+                            "typeString": "mapping(address => struct Protocol.CypherText storage ref)"
+                          }
+                        },
+                        "id": 8005,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 8004,
+                          "name": "nodeId",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7997,
+                          "src": "295:6:28",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "287:15:28",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_CypherText_$7991_storage",
+                          "typeString": "struct Protocol.CypherText storage ref"
+                        }
+                      },
+                      "id": 8006,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "c",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 7990,
+                      "src": "287:17:28",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                        "typeString": "uint256[] storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 8007,
+                      "name": "cypher",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 8000,
+                      "src": "307:6:28",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                        "typeString": "uint256[] calldata"
+                      }
+                    },
+                    "src": "287:26:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                      "typeString": "uint256[] storage ref"
+                    }
+                  },
+                  "id": 8009,
+                  "nodeType": "ExpressionStatement",
+                  "src": "287:26:28"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "1a56bbb3",
+            "id": 8011,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "insert_encrypted_matrix",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 8001,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7997,
+                  "mutability": "mutable",
+                  "name": "nodeId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 8011,
+                  "src": "229:14:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7996,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "229:7:28",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 8000,
+                  "mutability": "mutable",
+                  "name": "cypher",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 8011,
+                  "src": "245:22:28",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7998,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "245:4:28",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 7999,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "245:6:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "228:40:28"
+            },
+            "returnParameters": {
+              "id": 8002,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "276:0:28"
+            },
+            "scope": 8034,
+            "src": "196:125:28",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 8024,
+              "nodeType": "Block",
+              "src": "418:43:28",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 8019,
+                        "name": "mapNode",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7995,
+                        "src": "436:7:28",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CypherText_$7991_storage_$",
+                          "typeString": "mapping(address => struct Protocol.CypherText storage ref)"
+                        }
+                      },
+                      "id": 8021,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 8020,
+                        "name": "nodeId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8013,
+                        "src": "444:6:28",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "436:15:28",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CypherText_$7991_storage",
+                        "typeString": "struct Protocol.CypherText storage ref"
+                      }
+                    },
+                    "id": 8022,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "c",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 7990,
+                    "src": "436:17:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                      "typeString": "uint256[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 8018,
+                  "id": 8023,
+                  "nodeType": "Return",
+                  "src": "429:24:28"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "d3182278",
+            "id": 8025,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get_encrypted_matrix",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 8014,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8013,
+                  "mutability": "mutable",
+                  "name": "nodeId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 8025,
+                  "src": "359:14:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8012,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "359:7:28",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "358:16:28"
+            },
+            "returnParameters": {
+              "id": 8018,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8017,
+                  "mutability": "mutable",
+                  "name": "cypher",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 8025,
+                  "src": "396:20:28",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 8015,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "396:4:28",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 8016,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "396:6:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "395:22:28"
+            },
+            "scope": 8034,
+            "src": "329:132:28",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 8028,
+              "nodeType": "Block",
+              "src": "500:10:28",
+              "statements": []
+            },
+            "documentation": null,
+            "functionSelector": "70372632",
+            "id": 8029,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "insert_proof",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 8026,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "490:2:28"
+            },
+            "returnParameters": {
+              "id": 8027,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "500:0:28"
+            },
+            "scope": 8034,
+            "src": "469:41:28",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 8032,
+              "nodeType": "Block",
+              "src": "551:10:28",
+              "statements": []
+            },
+            "documentation": null,
+            "functionSelector": "c52cdaaa",
+            "id": 8033,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get_proof",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 8030,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "536:2:28"
+            },
+            "returnParameters": {
+              "id": 8031,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "551:0:28"
+            },
+            "scope": 8034,
+            "src": "518:43:28",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 8035,
+        "src": "69:497:28"
+      }
+    ],
+    "src": "33:533:28"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Protocol.sol",
+      "exportedSymbols": {
+        "Protocol": [
+          8034
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 7987,
+        "name": "PragmaDirective",
+        "src": "33:32:28"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            8034
+          ],
+          "name": "Protocol",
+          "scope": 8035
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "Protocol.CypherText",
+              "name": "CypherText",
+              "scope": 8034,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "c",
+                  "overrides": null,
+                  "scope": 7991,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256[]",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "uint256[]"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 7988,
+                        "name": "ElementaryTypeName",
+                        "src": "125:4:28"
+                      }
+                    ],
+                    "id": 7989,
+                    "name": "ArrayTypeName",
+                    "src": "125:6:28"
+                  }
+                ],
+                "id": 7990,
+                "name": "VariableDeclaration",
+                "src": "125:8:28"
+              }
+            ],
+            "id": 7991,
+            "name": "StructDefinition",
+            "src": "96:45:28"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "mapNode",
+              "overrides": null,
+              "scope": 8034,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => struct Protocol.CypherText)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => struct Protocol.CypherText)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 7992,
+                    "name": "ElementaryTypeName",
+                    "src": "157:7:28"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "CypherText",
+                      "referencedDeclaration": 7991,
+                      "type": "struct Protocol.CypherText"
+                    },
+                    "id": 7993,
+                    "name": "UserDefinedTypeName",
+                    "src": "168:10:28"
+                  }
+                ],
+                "id": 7994,
+                "name": "Mapping",
+                "src": "149:30:28"
+              }
+            ],
+            "id": 7995,
+            "name": "VariableDeclaration",
+            "src": "149:38:28"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "1a56bbb3",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "insert_encrypted_matrix",
+              "overrides": null,
+              "scope": 8034,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "nodeId",
+                      "overrides": null,
+                      "scope": 8011,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 7996,
+                        "name": "ElementaryTypeName",
+                        "src": "229:7:28"
+                      }
+                    ],
+                    "id": 7997,
+                    "name": "VariableDeclaration",
+                    "src": "229:14:28"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "cypher",
+                      "overrides": null,
+                      "scope": 8011,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "uint256[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 7998,
+                            "name": "ElementaryTypeName",
+                            "src": "245:4:28"
+                          }
+                        ],
+                        "id": 7999,
+                        "name": "ArrayTypeName",
+                        "src": "245:6:28"
+                      }
+                    ],
+                    "id": 8000,
+                    "name": "VariableDeclaration",
+                    "src": "245:22:28"
+                  }
+                ],
+                "id": 8001,
+                "name": "ParameterList",
+                "src": "228:40:28"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8002,
+                "name": "ParameterList",
+                "src": "276:0:28"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256[] storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "c",
+                              "referencedDeclaration": 7990,
+                              "type": "uint256[] storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Protocol.CypherText storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 7995,
+                                      "type": "mapping(address => struct Protocol.CypherText storage ref)",
+                                      "value": "mapNode"
+                                    },
+                                    "id": 8003,
+                                    "name": "Identifier",
+                                    "src": "287:7:28"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 7997,
+                                      "type": "address",
+                                      "value": "nodeId"
+                                    },
+                                    "id": 8004,
+                                    "name": "Identifier",
+                                    "src": "295:6:28"
+                                  }
+                                ],
+                                "id": 8005,
+                                "name": "IndexAccess",
+                                "src": "287:15:28"
+                              }
+                            ],
+                            "id": 8006,
+                            "name": "MemberAccess",
+                            "src": "287:17:28"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 8000,
+                              "type": "uint256[] calldata",
+                              "value": "cypher"
+                            },
+                            "id": 8007,
+                            "name": "Identifier",
+                            "src": "307:6:28"
+                          }
+                        ],
+                        "id": 8008,
+                        "name": "Assignment",
+                        "src": "287:26:28"
+                      }
+                    ],
+                    "id": 8009,
+                    "name": "ExpressionStatement",
+                    "src": "287:26:28"
+                  }
+                ],
+                "id": 8010,
+                "name": "Block",
+                "src": "276:45:28"
+              }
+            ],
+            "id": 8011,
+            "name": "FunctionDefinition",
+            "src": "196:125:28"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "d3182278",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "get_encrypted_matrix",
+              "overrides": null,
+              "scope": 8034,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "nodeId",
+                      "overrides": null,
+                      "scope": 8025,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 8012,
+                        "name": "ElementaryTypeName",
+                        "src": "359:7:28"
+                      }
+                    ],
+                    "id": 8013,
+                    "name": "VariableDeclaration",
+                    "src": "359:14:28"
+                  }
+                ],
+                "id": 8014,
+                "name": "ParameterList",
+                "src": "358:16:28"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "cypher",
+                      "overrides": null,
+                      "scope": 8025,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "uint256[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 8015,
+                            "name": "ElementaryTypeName",
+                            "src": "396:4:28"
+                          }
+                        ],
+                        "id": 8016,
+                        "name": "ArrayTypeName",
+                        "src": "396:6:28"
+                      }
+                    ],
+                    "id": 8017,
+                    "name": "VariableDeclaration",
+                    "src": "396:20:28"
+                  }
+                ],
+                "id": 8018,
+                "name": "ParameterList",
+                "src": "395:22:28"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 8018
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "c",
+                          "referencedDeclaration": 7990,
+                          "type": "uint256[] storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "struct Protocol.CypherText storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7995,
+                                  "type": "mapping(address => struct Protocol.CypherText storage ref)",
+                                  "value": "mapNode"
+                                },
+                                "id": 8019,
+                                "name": "Identifier",
+                                "src": "436:7:28"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8013,
+                                  "type": "address",
+                                  "value": "nodeId"
+                                },
+                                "id": 8020,
+                                "name": "Identifier",
+                                "src": "444:6:28"
+                              }
+                            ],
+                            "id": 8021,
+                            "name": "IndexAccess",
+                            "src": "436:15:28"
+                          }
+                        ],
+                        "id": 8022,
+                        "name": "MemberAccess",
+                        "src": "436:17:28"
+                      }
+                    ],
+                    "id": 8023,
+                    "name": "Return",
+                    "src": "429:24:28"
+                  }
+                ],
+                "id": 8024,
+                "name": "Block",
+                "src": "418:43:28"
+              }
+            ],
+            "id": 8025,
+            "name": "FunctionDefinition",
+            "src": "329:132:28"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "70372632",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "insert_proof",
+              "overrides": null,
+              "scope": 8034,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8026,
+                "name": "ParameterList",
+                "src": "490:2:28"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8027,
+                "name": "ParameterList",
+                "src": "500:0:28"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8028,
+                "name": "Block",
+                "src": "500:10:28"
+              }
+            ],
+            "id": 8029,
+            "name": "FunctionDefinition",
+            "src": "469:41:28"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "c52cdaaa",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "get_proof",
+              "overrides": null,
+              "scope": 8034,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8030,
+                "name": "ParameterList",
+                "src": "536:2:28"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8031,
+                "name": "ParameterList",
+                "src": "551:0:28"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8032,
+                "name": "Block",
+                "src": "551:10:28"
+              }
+            ],
+            "id": 8033,
+            "name": "FunctionDefinition",
+            "src": "518:43:28"
+          }
+        ],
+        "id": 8034,
+        "name": "ContractDefinition",
+        "src": "69:497:28"
+      }
+    ],
+    "id": 8035,
+    "name": "SourceUnit",
+    "src": "33:533:28"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xa667C93197C349054BAb7bBb9367FcBDdC5304C9",
+      "transactionHash": "0xa75cb360e0bf33f69e2e367c640fc4ecca9c282c58a35e9f17519ea98df22bac"
+    }
+  },
+  "schemaVersion": "3.4.8",
+  "updatedAt": "2022-08-29T08:46:40.147Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

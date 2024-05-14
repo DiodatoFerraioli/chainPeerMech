@@ -1,0 +1,3634 @@
+{
+  "contractName": "Phases",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "enum Phases.Phase",
+          "name": "p",
+          "type": "Phases.Phase"
+        }
+      ],
+      "name": "checkPhase",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"enum Phases.Phase\",\"name\":\"p\",\"type\":\"Phases.Phase\"}],\"name\":\"checkPhase\",\"outputs\":[],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Giovanni Rescinito\",\"kind\":\"dev\",\"methods\":{\"checkPhase(Phases.Phase)\":{\"params\":{\"p\":\"expected phase\"}}},\"title\":\"Execution Phases\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"checkPhase(Phases.Phase)\":{\"notice\":\"checks that the contract's current phase is the expected one\"},\"endAssignmentPhase()\":{\"notice\":\"ends assignment phase and starts commitment phase\"},\"endCommitmentPhase()\":{\"notice\":\"ends commitment phase and starts reveal phase\"},\"endRevealPhase()\":{\"notice\":\"ends reveal phase and starts selection phase\"},\"endSelectionPhase()\":{\"notice\":\"ends selection phase and starts completed phase\"},\"endSubmissionPhase()\":{\"notice\":\"ends submission phase and starts assignment phase\"}},\"notice\":\"phases occurring the system execution\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Phases.sol\":\"Phases\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ImpartialSelectionInterface.sol\":{\"keccak256\":\"0xe4c5706d929d9d2dc550018e247656365974192dbfee86e22baf635291e1f152\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8a635f5fc7362563083ac01e772b74b9607297919925ff44b4b3f12dfbf46b20\",\"dweb:/ipfs/Qma4fic8qkzYLkecu1wAu3mhYKK4PVoFvFPrGnLV7uvYoD\"]},\"project:/contracts/Phases.sol\":{\"keccak256\":\"0x6c5512622ad588ef7f04aa2679b60639c0c48326072a028b51535ca167824870\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://461b864013cb16c79a6d708a8b9c9513abcc59376276219bc6e852039c3713a5\",\"dweb:/ipfs/QmfV3MzWxzpsoa5awiGzfMG1xRrMJ1DyYbShm2o9gG8o3L\"]}},\"version\":1}",
+  "bytecode": "0x610355610026600b82828239805160001a60731461001957fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361061006f5760e060020a600035046334b6d081811461007457806340b694b51461008b57806358b3476a1461009e578063965fdd5c146100b3578063afbde963146100c8578063f7ad24d1146100dd575b600080fd5b81801561008057600080fd5b506100896100f2565b005b610089610099366004610293565b61010a565b8180156100aa57600080fd5b506100896101dd565b8180156100bf57600080fd5b506100896101f2565b8180156100d457600080fd5b50610089610207565b8180156100e957600080fd5b5061008961021c565b60006100fd8161010a565b610107600161022d565b50565b80600581111561011657fe5b60ff163073ffffffffffffffffffffffffffffffffffffffff1663a3a40ea56040518163ffffffff1660e060020a02815260040160206040518083038186803b15801561016257600080fd5b505afa158015610176573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061019a91906102b9565b60ff1614610107576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016101d4906102da565b60405180910390fd5b60026101e88161010a565b610107600361022d565b60016101fd8161010a565b610107600261022d565b60036102128161010a565b610107600461022d565b60046102278161010a565b61010760055b3063cd3f291082600581111561023f57fe5b6040518263ffffffff1660e060020a02815260040161025e9190610311565b600060405180830381600087803b15801561027857600080fd5b505af115801561028c573d6000803e3d6000fd5b5050505050565b6000602082840312156102a4578081fd5b8135600681106102b2578182fd5b9392505050565b6000602082840312156102ca578081fd5b815160ff811681146102b2578182fd5b6020808252601d908201527f446966666572656e74207068617365207468616e206578706563746564000000604082015260600190565b60ff9190911681526020019056fea2646970667358221220e6ef878d7d67a16971674c2e5b07b07c15140a33be158169a6363e75ff7c13b764736f6c634300060c0033",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361061006f5760e060020a600035046334b6d081811461007457806340b694b51461008b57806358b3476a1461009e578063965fdd5c146100b3578063afbde963146100c8578063f7ad24d1146100dd575b600080fd5b81801561008057600080fd5b506100896100f2565b005b610089610099366004610293565b61010a565b8180156100aa57600080fd5b506100896101dd565b8180156100bf57600080fd5b506100896101f2565b8180156100d457600080fd5b50610089610207565b8180156100e957600080fd5b5061008961021c565b60006100fd8161010a565b610107600161022d565b50565b80600581111561011657fe5b60ff163073ffffffffffffffffffffffffffffffffffffffff1663a3a40ea56040518163ffffffff1660e060020a02815260040160206040518083038186803b15801561016257600080fd5b505afa158015610176573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061019a91906102b9565b60ff1614610107576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016101d4906102da565b60405180910390fd5b60026101e88161010a565b610107600361022d565b60016101fd8161010a565b610107600261022d565b60036102128161010a565b610107600461022d565b60046102278161010a565b61010760055b3063cd3f291082600581111561023f57fe5b6040518263ffffffff1660e060020a02815260040161025e9190610311565b600060405180830381600087803b15801561027857600080fd5b505af115801561028c573d6000803e3d6000fd5b5050505050565b6000602082840312156102a4578081fd5b8135600681106102b2578182fd5b9392505050565b6000602082840312156102ca578081fd5b815160ff811681146102b2578182fd5b6020808252601d908201527f446966666572656e74207068617365207468616e206578706563746564000000604082015260600190565b60ff9190911681526020019056fea2646970667358221220e6ef878d7d67a16971674c2e5b07b07c15140a33be158169a6363e75ff7c13b764736f6c634300060c0033",
+  "immutableReferences": {},
+  "sourceMap": "248:1850:27:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "248:1850:27:-:0;;;;;;;;;;;-1:-1:-1;;;248:1850:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1292:109;;;;;;;;;;;;;:::i;:::-;;791:173;;;;;;:::i;:::-;;:::i;1650:104::-;;;;;;;;;;;;;:::i;1473:109::-;;;;;;;;;;;;;:::i;1821:99::-;;;;;;;;;;;;;:::i;1990:106::-;;;;;;;;;;;;;:::i;1292:109::-;1337:16;645:13;656:1;645:10;:13::i;:::-;1365:29:::1;1377:16;1365:11;:29::i;:::-;1292:109:::0;:::o;791:173::-;920:1;914:8;;;;;;;;850:72;;886:4;850:58;;;:60;;;;;-1:-1:-1;;;850:60:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;:72;;;842:114;;;;;;;;;;;;:::i;:::-;;;;;;;;1650:104;1695:16;645:13;656:1;645:10;:13::i;:::-;1722:25:::1;1734:12;1722:11;:25::i;1473:109::-:0;1518:16;645:13;656:1;645:10;:13::i;:::-;1546:29:::1;1558:16;1546:11;:29::i;1821:99::-:0;1862:12;645:13;656:1;645:10;:13::i;:::-;1885:28:::1;1897:15;1885:11;:28::i;1990:106::-:0;2034:15;645:13;656:1;645:10;:13::i;:::-;2061:28:::1;2073:15;1089:131:::0;1177:4;1141:58;1206:5;1200:12;;;;;;;;1141:72;;;;;-1:-1:-1;;;1141:72:27;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1089:131;:::o;299:261:-1:-;;413:2;401:9;392:7;388:23;384:32;381:2;;;-1:-1;;419:12;381:2;95:6;82:20;2268:1;2261:5;2258:12;2248:2;;-1:-1;;2274:12;2248:2;471:73;375:185;-1:-1;;;375:185::o;567:259::-;;680:2;668:9;659:7;655:23;651:32;648:2;;;-1:-1;;686:12;648:2;244:6;238:13;2172:4;2383:5;2161:16;2360:5;2357:33;2347:2;;-1:-1;;2394:12;1285:416;1485:2;1499:47;;;1058:2;1470:18;;;2033:19;1094:31;2073:14;;;1074:52;1145:12;;;1456:245::o;1708:214::-;2172:4;2161:16;;;;1238:35;;1831:2;1816:18;;1802:120::o",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.4.18;\npragma experimental ABIEncoderV2;\n\nimport \"./ImpartialSelectionInterface.sol\";\n\n/// @title Execution Phases\n/// @author Giovanni Rescinito\n/// @notice phases occurring the system execution\nlibrary Phases{\n    // Enumeration of the possible execution phases of the system\n    enum Phase {Submission, \n                Assignment, \n                Commitment, \n                Reveal, \n                Selection, \n                Completed}\n\n    /// @notice checks that the contract's current phase is the expected one\n    /// @param p expected phase\n    modifier check(Phase p) {\n        checkPhase(p);\n        _;\n    }\n\n    /// @notice checks that the contract's current phase is the expected one\n    /// @param p expected phase\n    function checkPhase(Phase p) view public {\n        require(ImpartialSelectionInterface(address(this)).getCurrentPhase() == uint8(p), \"Different phase than expected\"); \n    }\n\n    /// @notice updates the current phase of the contract\n    /// @param phase the phase the contract should be put in\n    function changePhase(Phase phase) private {\n        ImpartialSelectionInterface(address(this)).setCurrentPhase(uint8(phase));\n    }\n\n    /// @notice ends submission phase and starts assignment phase\n    function endSubmissionPhase() external check(Phase.Submission) {\n        changePhase(Phase.Assignment);\n    }\n\n    /// @notice ends assignment phase and starts commitment phase\n    function endAssignmentPhase() external check(Phase.Assignment) {\n        changePhase(Phase.Commitment);\n    }\n\n    /// @notice ends commitment phase and starts reveal phase\n    function endCommitmentPhase() external check(Phase.Commitment){\n        changePhase(Phase.Reveal);\n    }\n\n    /// @notice ends reveal phase and starts selection phase\n    function endRevealPhase() external check(Phase.Reveal){\n        changePhase(Phase.Selection);\n    }\n\n    /// @notice ends selection phase and starts completed phase\n    function endSelectionPhase() external check(Phase.Selection) {\n        changePhase(Phase.Completed);\n    }\n}",
+  "sourcePath": "C:\\Users\\Claudio\\Desktop\\Tesi\\Codice reviews\\reviews - ipfs\\contracts\\Phases.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Phases.sol",
+    "exportedSymbols": {
+      "Phases": [
+        7586
+      ]
+    },
+    "id": 7587,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7450,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:25:27"
+      },
+      {
+        "id": 7451,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "59:33:27"
+      },
+      {
+        "absolutePath": "project:/contracts/ImpartialSelectionInterface.sol",
+        "file": "./ImpartialSelectionInterface.sol",
+        "id": 7452,
+        "nodeType": "ImportDirective",
+        "scope": 7587,
+        "sourceUnit": 6881,
+        "src": "94:43:27",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 7453,
+          "nodeType": "StructuredDocumentation",
+          "src": "139:109:27",
+          "text": "@title Execution Phases\n @author Giovanni Rescinito\n @notice phases occurring the system execution"
+        },
+        "fullyImplemented": true,
+        "id": 7586,
+        "linearizedBaseContracts": [
+          7586
+        ],
+        "name": "Phases",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Phases.Phase",
+            "id": 7460,
+            "members": [
+              {
+                "id": 7454,
+                "name": "Submission",
+                "nodeType": "EnumValue",
+                "src": "346:10:27"
+              },
+              {
+                "id": 7455,
+                "name": "Assignment",
+                "nodeType": "EnumValue",
+                "src": "375:10:27"
+              },
+              {
+                "id": 7456,
+                "name": "Commitment",
+                "nodeType": "EnumValue",
+                "src": "404:10:27"
+              },
+              {
+                "id": 7457,
+                "name": "Reveal",
+                "nodeType": "EnumValue",
+                "src": "433:6:27"
+              },
+              {
+                "id": 7458,
+                "name": "Selection",
+                "nodeType": "EnumValue",
+                "src": "458:9:27"
+              },
+              {
+                "id": 7459,
+                "name": "Completed",
+                "nodeType": "EnumValue",
+                "src": "486:9:27"
+              }
+            ],
+            "name": "Phase",
+            "nodeType": "EnumDefinition",
+            "src": "334:162:27"
+          },
+          {
+            "body": {
+              "id": 7470,
+              "nodeType": "Block",
+              "src": "635:41:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 7466,
+                        "name": "p",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7463,
+                        "src": "656:1:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Phase_$7460",
+                          "typeString": "enum Phases.Phase"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_Phase_$7460",
+                          "typeString": "enum Phases.Phase"
+                        }
+                      ],
+                      "id": 7465,
+                      "name": "checkPhase",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7495,
+                      "src": "645:10:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_enum$_Phase_$7460_$returns$__$",
+                        "typeString": "function (enum Phases.Phase) view"
+                      }
+                    },
+                    "id": 7467,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "645:13:27",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7468,
+                  "nodeType": "ExpressionStatement",
+                  "src": "645:13:27"
+                },
+                {
+                  "id": 7469,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "668:1:27"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 7461,
+              "nodeType": "StructuredDocumentation",
+              "src": "502:104:27",
+              "text": "@notice checks that the contract's current phase is the expected one\n @param p expected phase"
+            },
+            "id": 7471,
+            "name": "check",
+            "nodeType": "ModifierDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7464,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7463,
+                  "mutability": "mutable",
+                  "name": "p",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7471,
+                  "src": "626:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Phase_$7460",
+                    "typeString": "enum Phases.Phase"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 7462,
+                    "name": "Phase",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 7460,
+                    "src": "626:5:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Phase_$7460",
+                      "typeString": "enum Phases.Phase"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "625:9:27"
+            },
+            "src": "611:65:27",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 7494,
+              "nodeType": "Block",
+              "src": "832:132:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        "id": 7490,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 7481,
+                                      "name": "this",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": -28,
+                                      "src": "886:4:27",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_contract$_Phases_$7586",
+                                        "typeString": "library Phases"
+                                      }
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_contract$_Phases_$7586",
+                                        "typeString": "library Phases"
+                                      }
+                                    ],
+                                    "id": 7480,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "lValueRequested": false,
+                                    "nodeType": "ElementaryTypeNameExpression",
+                                    "src": "878:7:27",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_type$_t_address_$",
+                                      "typeString": "type(address)"
+                                    },
+                                    "typeName": {
+                                      "id": 7479,
+                                      "name": "address",
+                                      "nodeType": "ElementaryTypeName",
+                                      "src": "878:7:27",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": null,
+                                        "typeString": null
+                                      }
+                                    }
+                                  },
+                                  "id": 7482,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "typeConversion",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "878:13:27",
+                                  "tryCall": false,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                  }
+                                ],
+                                "id": 7478,
+                                "name": "ImpartialSelectionInterface",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6880,
+                                "src": "850:27:27",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_ImpartialSelectionInterface_$6880_$",
+                                  "typeString": "type(contract ImpartialSelectionInterface)"
+                                }
+                              },
+                              "id": 7483,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "850:42:27",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_ImpartialSelectionInterface_$6880",
+                                "typeString": "contract ImpartialSelectionInterface"
+                              }
+                            },
+                            "id": 7484,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "getCurrentPhase",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 6768,
+                            "src": "850:58:27",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$__$returns$_t_uint8_$",
+                              "typeString": "function () view external returns (uint8)"
+                            }
+                          },
+                          "id": 7485,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "850:60:27",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 7488,
+                              "name": "p",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 7474,
+                              "src": "920:1:27",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_enum$_Phase_$7460",
+                                "typeString": "enum Phases.Phase"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_enum$_Phase_$7460",
+                                "typeString": "enum Phases.Phase"
+                              }
+                            ],
+                            "id": 7487,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "914:5:27",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint8_$",
+                              "typeString": "type(uint8)"
+                            },
+                            "typeName": {
+                              "id": 7486,
+                              "name": "uint8",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "914:5:27",
+                              "typeDescriptions": {
+                                "typeIdentifier": null,
+                                "typeString": null
+                              }
+                            }
+                          },
+                          "id": 7489,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "914:8:27",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "src": "850:72:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "446966666572656e74207068617365207468616e206578706563746564",
+                        "id": 7491,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "924:31:27",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_5321e865e306b55b9f11e92059b2593fc320b1e520f1e33534dfbdbca83b2ff7",
+                          "typeString": "literal_string \"Different phase than expected\""
+                        },
+                        "value": "Different phase than expected"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_5321e865e306b55b9f11e92059b2593fc320b1e520f1e33534dfbdbca83b2ff7",
+                          "typeString": "literal_string \"Different phase than expected\""
+                        }
+                      ],
+                      "id": 7477,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "842:7:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 7492,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "842:114:27",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7493,
+                  "nodeType": "ExpressionStatement",
+                  "src": "842:114:27"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 7472,
+              "nodeType": "StructuredDocumentation",
+              "src": "682:104:27",
+              "text": "@notice checks that the contract's current phase is the expected one\n @param p expected phase"
+            },
+            "functionSelector": "40b694b5",
+            "id": 7495,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkPhase",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7475,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7474,
+                  "mutability": "mutable",
+                  "name": "p",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7495,
+                  "src": "811:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Phase_$7460",
+                    "typeString": "enum Phases.Phase"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 7473,
+                    "name": "Phase",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 7460,
+                    "src": "811:5:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Phase_$7460",
+                      "typeString": "enum Phases.Phase"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "810:9:27"
+            },
+            "returnParameters": {
+              "id": 7476,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "832:0:27"
+            },
+            "scope": 7586,
+            "src": "791:173:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7514,
+              "nodeType": "Block",
+              "src": "1131:89:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 7510,
+                            "name": "phase",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 7498,
+                            "src": "1206:5:27",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Phase_$7460",
+                              "typeString": "enum Phases.Phase"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_enum$_Phase_$7460",
+                              "typeString": "enum Phases.Phase"
+                            }
+                          ],
+                          "id": 7509,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "1200:5:27",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint8_$",
+                            "typeString": "type(uint8)"
+                          },
+                          "typeName": {
+                            "id": 7508,
+                            "name": "uint8",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "1200:5:27",
+                            "typeDescriptions": {
+                              "typeIdentifier": null,
+                              "typeString": null
+                            }
+                          }
+                        },
+                        "id": 7511,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1200:12:27",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 7504,
+                                "name": "this",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -28,
+                                "src": "1177:4:27",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_Phases_$7586",
+                                  "typeString": "library Phases"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_contract$_Phases_$7586",
+                                  "typeString": "library Phases"
+                                }
+                              ],
+                              "id": 7503,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "1169:7:27",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": {
+                                "id": 7502,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "1169:7:27",
+                                "typeDescriptions": {
+                                  "typeIdentifier": null,
+                                  "typeString": null
+                                }
+                              }
+                            },
+                            "id": 7505,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1169:13:27",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 7501,
+                          "name": "ImpartialSelectionInterface",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6880,
+                          "src": "1141:27:27",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_ImpartialSelectionInterface_$6880_$",
+                            "typeString": "type(contract ImpartialSelectionInterface)"
+                          }
+                        },
+                        "id": 7506,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1141:42:27",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ImpartialSelectionInterface_$6880",
+                          "typeString": "contract ImpartialSelectionInterface"
+                        }
+                      },
+                      "id": 7507,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setCurrentPhase",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6763,
+                      "src": "1141:58:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint8_$returns$__$",
+                        "typeString": "function (uint8) external"
+                      }
+                    },
+                    "id": 7512,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1141:72:27",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7513,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1141:72:27"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 7496,
+              "nodeType": "StructuredDocumentation",
+              "src": "970:114:27",
+              "text": "@notice updates the current phase of the contract\n @param phase the phase the contract should be put in"
+            },
+            "id": 7515,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "changePhase",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7499,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7498,
+                  "mutability": "mutable",
+                  "name": "phase",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7515,
+                  "src": "1110:11:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Phase_$7460",
+                    "typeString": "enum Phases.Phase"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 7497,
+                    "name": "Phase",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 7460,
+                    "src": "1110:5:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Phase_$7460",
+                      "typeString": "enum Phases.Phase"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1109:13:27"
+            },
+            "returnParameters": {
+              "id": 7500,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1131:0:27"
+            },
+            "scope": 7586,
+            "src": "1089:131:27",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 7528,
+              "nodeType": "Block",
+              "src": "1355:46:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 7524,
+                          "name": "Phase",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7460,
+                          "src": "1377:5:27",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_Phase_$7460_$",
+                            "typeString": "type(enum Phases.Phase)"
+                          }
+                        },
+                        "id": 7525,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "Assignment",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1377:16:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Phase_$7460",
+                          "typeString": "enum Phases.Phase"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_Phase_$7460",
+                          "typeString": "enum Phases.Phase"
+                        }
+                      ],
+                      "id": 7523,
+                      "name": "changePhase",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7515,
+                      "src": "1365:11:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_enum$_Phase_$7460_$returns$__$",
+                        "typeString": "function (enum Phases.Phase)"
+                      }
+                    },
+                    "id": 7526,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1365:29:27",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7527,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1365:29:27"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 7516,
+              "nodeType": "StructuredDocumentation",
+              "src": "1226:61:27",
+              "text": "@notice ends submission phase and starts assignment phase"
+            },
+            "functionSelector": "34b6d081",
+            "id": 7529,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 7519,
+                      "name": "Phase",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7460,
+                      "src": "1337:5:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_Phase_$7460_$",
+                        "typeString": "type(enum Phases.Phase)"
+                      }
+                    },
+                    "id": 7520,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "Submission",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1337:16:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Phase_$7460",
+                      "typeString": "enum Phases.Phase"
+                    }
+                  }
+                ],
+                "id": 7521,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 7518,
+                  "name": "check",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 7471,
+                  "src": "1331:5:27",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_enum$_Phase_$7460_$",
+                    "typeString": "modifier (enum Phases.Phase)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1331:23:27"
+              }
+            ],
+            "name": "endSubmissionPhase",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7517,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1319:2:27"
+            },
+            "returnParameters": {
+              "id": 7522,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1355:0:27"
+            },
+            "scope": 7586,
+            "src": "1292:109:27",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 7542,
+              "nodeType": "Block",
+              "src": "1536:46:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 7538,
+                          "name": "Phase",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7460,
+                          "src": "1558:5:27",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_Phase_$7460_$",
+                            "typeString": "type(enum Phases.Phase)"
+                          }
+                        },
+                        "id": 7539,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "Commitment",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1558:16:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Phase_$7460",
+                          "typeString": "enum Phases.Phase"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_Phase_$7460",
+                          "typeString": "enum Phases.Phase"
+                        }
+                      ],
+                      "id": 7537,
+                      "name": "changePhase",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7515,
+                      "src": "1546:11:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_enum$_Phase_$7460_$returns$__$",
+                        "typeString": "function (enum Phases.Phase)"
+                      }
+                    },
+                    "id": 7540,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1546:29:27",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7541,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1546:29:27"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 7530,
+              "nodeType": "StructuredDocumentation",
+              "src": "1407:61:27",
+              "text": "@notice ends assignment phase and starts commitment phase"
+            },
+            "functionSelector": "965fdd5c",
+            "id": 7543,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 7533,
+                      "name": "Phase",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7460,
+                      "src": "1518:5:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_Phase_$7460_$",
+                        "typeString": "type(enum Phases.Phase)"
+                      }
+                    },
+                    "id": 7534,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "Assignment",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1518:16:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Phase_$7460",
+                      "typeString": "enum Phases.Phase"
+                    }
+                  }
+                ],
+                "id": 7535,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 7532,
+                  "name": "check",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 7471,
+                  "src": "1512:5:27",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_enum$_Phase_$7460_$",
+                    "typeString": "modifier (enum Phases.Phase)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1512:23:27"
+              }
+            ],
+            "name": "endAssignmentPhase",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7531,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1500:2:27"
+            },
+            "returnParameters": {
+              "id": 7536,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1536:0:27"
+            },
+            "scope": 7586,
+            "src": "1473:109:27",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 7556,
+              "nodeType": "Block",
+              "src": "1712:42:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 7552,
+                          "name": "Phase",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7460,
+                          "src": "1734:5:27",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_Phase_$7460_$",
+                            "typeString": "type(enum Phases.Phase)"
+                          }
+                        },
+                        "id": 7553,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "Reveal",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1734:12:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Phase_$7460",
+                          "typeString": "enum Phases.Phase"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_Phase_$7460",
+                          "typeString": "enum Phases.Phase"
+                        }
+                      ],
+                      "id": 7551,
+                      "name": "changePhase",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7515,
+                      "src": "1722:11:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_enum$_Phase_$7460_$returns$__$",
+                        "typeString": "function (enum Phases.Phase)"
+                      }
+                    },
+                    "id": 7554,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1722:25:27",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7555,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1722:25:27"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 7544,
+              "nodeType": "StructuredDocumentation",
+              "src": "1588:57:27",
+              "text": "@notice ends commitment phase and starts reveal phase"
+            },
+            "functionSelector": "58b3476a",
+            "id": 7557,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 7547,
+                      "name": "Phase",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7460,
+                      "src": "1695:5:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_Phase_$7460_$",
+                        "typeString": "type(enum Phases.Phase)"
+                      }
+                    },
+                    "id": 7548,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "Commitment",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1695:16:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Phase_$7460",
+                      "typeString": "enum Phases.Phase"
+                    }
+                  }
+                ],
+                "id": 7549,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 7546,
+                  "name": "check",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 7471,
+                  "src": "1689:5:27",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_enum$_Phase_$7460_$",
+                    "typeString": "modifier (enum Phases.Phase)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1689:23:27"
+              }
+            ],
+            "name": "endCommitmentPhase",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7545,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1677:2:27"
+            },
+            "returnParameters": {
+              "id": 7550,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1712:0:27"
+            },
+            "scope": 7586,
+            "src": "1650:104:27",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 7570,
+              "nodeType": "Block",
+              "src": "1875:45:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 7566,
+                          "name": "Phase",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7460,
+                          "src": "1897:5:27",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_Phase_$7460_$",
+                            "typeString": "type(enum Phases.Phase)"
+                          }
+                        },
+                        "id": 7567,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "Selection",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1897:15:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Phase_$7460",
+                          "typeString": "enum Phases.Phase"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_Phase_$7460",
+                          "typeString": "enum Phases.Phase"
+                        }
+                      ],
+                      "id": 7565,
+                      "name": "changePhase",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7515,
+                      "src": "1885:11:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_enum$_Phase_$7460_$returns$__$",
+                        "typeString": "function (enum Phases.Phase)"
+                      }
+                    },
+                    "id": 7568,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1885:28:27",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7569,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1885:28:27"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 7558,
+              "nodeType": "StructuredDocumentation",
+              "src": "1760:56:27",
+              "text": "@notice ends reveal phase and starts selection phase"
+            },
+            "functionSelector": "afbde963",
+            "id": 7571,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 7561,
+                      "name": "Phase",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7460,
+                      "src": "1862:5:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_Phase_$7460_$",
+                        "typeString": "type(enum Phases.Phase)"
+                      }
+                    },
+                    "id": 7562,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "Reveal",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1862:12:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Phase_$7460",
+                      "typeString": "enum Phases.Phase"
+                    }
+                  }
+                ],
+                "id": 7563,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 7560,
+                  "name": "check",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 7471,
+                  "src": "1856:5:27",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_enum$_Phase_$7460_$",
+                    "typeString": "modifier (enum Phases.Phase)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1856:19:27"
+              }
+            ],
+            "name": "endRevealPhase",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7559,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1844:2:27"
+            },
+            "returnParameters": {
+              "id": 7564,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1875:0:27"
+            },
+            "scope": 7586,
+            "src": "1821:99:27",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 7584,
+              "nodeType": "Block",
+              "src": "2051:45:27",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 7580,
+                          "name": "Phase",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7460,
+                          "src": "2073:5:27",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_Phase_$7460_$",
+                            "typeString": "type(enum Phases.Phase)"
+                          }
+                        },
+                        "id": 7581,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "Completed",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "2073:15:27",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Phase_$7460",
+                          "typeString": "enum Phases.Phase"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_Phase_$7460",
+                          "typeString": "enum Phases.Phase"
+                        }
+                      ],
+                      "id": 7579,
+                      "name": "changePhase",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7515,
+                      "src": "2061:11:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_enum$_Phase_$7460_$returns$__$",
+                        "typeString": "function (enum Phases.Phase)"
+                      }
+                    },
+                    "id": 7582,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2061:28:27",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7583,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2061:28:27"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 7572,
+              "nodeType": "StructuredDocumentation",
+              "src": "1926:59:27",
+              "text": "@notice ends selection phase and starts completed phase"
+            },
+            "functionSelector": "f7ad24d1",
+            "id": 7585,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 7575,
+                      "name": "Phase",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7460,
+                      "src": "2034:5:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_Phase_$7460_$",
+                        "typeString": "type(enum Phases.Phase)"
+                      }
+                    },
+                    "id": 7576,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "Selection",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "2034:15:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Phase_$7460",
+                      "typeString": "enum Phases.Phase"
+                    }
+                  }
+                ],
+                "id": 7577,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 7574,
+                  "name": "check",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 7471,
+                  "src": "2028:5:27",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_enum$_Phase_$7460_$",
+                    "typeString": "modifier (enum Phases.Phase)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2028:22:27"
+              }
+            ],
+            "name": "endSelectionPhase",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7573,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2016:2:27"
+            },
+            "returnParameters": {
+              "id": 7578,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2051:0:27"
+            },
+            "scope": 7586,
+            "src": "1990:106:27",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7587,
+        "src": "248:1850:27"
+      }
+    ],
+    "src": "33:2065:27"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Phases.sol",
+      "exportedSymbols": {
+        "Phases": [
+          7586
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 7450,
+        "name": "PragmaDirective",
+        "src": "33:25:27"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 7451,
+        "name": "PragmaDirective",
+        "src": "59:33:27"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 6881,
+          "absolutePath": "project:/contracts/ImpartialSelectionInterface.sol",
+          "file": "./ImpartialSelectionInterface.sol",
+          "scope": 7587,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 7452,
+        "name": "ImportDirective",
+        "src": "94:43:27"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            7586
+          ],
+          "name": "Phases",
+          "scope": 7587
+        },
+        "children": [
+          {
+            "attributes": {
+              "text": "@title Execution Phases\n @author Giovanni Rescinito\n @notice phases occurring the system execution"
+            },
+            "id": 7453,
+            "name": "StructuredDocumentation",
+            "src": "139:109:27"
+          },
+          {
+            "attributes": {
+              "canonicalName": "Phases.Phase",
+              "name": "Phase"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "Submission"
+                },
+                "id": 7454,
+                "name": "EnumValue",
+                "src": "346:10:27"
+              },
+              {
+                "attributes": {
+                  "name": "Assignment"
+                },
+                "id": 7455,
+                "name": "EnumValue",
+                "src": "375:10:27"
+              },
+              {
+                "attributes": {
+                  "name": "Commitment"
+                },
+                "id": 7456,
+                "name": "EnumValue",
+                "src": "404:10:27"
+              },
+              {
+                "attributes": {
+                  "name": "Reveal"
+                },
+                "id": 7457,
+                "name": "EnumValue",
+                "src": "433:6:27"
+              },
+              {
+                "attributes": {
+                  "name": "Selection"
+                },
+                "id": 7458,
+                "name": "EnumValue",
+                "src": "458:9:27"
+              },
+              {
+                "attributes": {
+                  "name": "Completed"
+                },
+                "id": 7459,
+                "name": "EnumValue",
+                "src": "486:9:27"
+              }
+            ],
+            "id": 7460,
+            "name": "EnumDefinition",
+            "src": "334:162:27"
+          },
+          {
+            "attributes": {
+              "name": "check",
+              "overrides": null,
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice checks that the contract's current phase is the expected one\n @param p expected phase"
+                },
+                "id": 7461,
+                "name": "StructuredDocumentation",
+                "src": "502:104:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "p",
+                      "overrides": null,
+                      "scope": 7471,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum Phases.Phase",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Phase",
+                          "referencedDeclaration": 7460,
+                          "type": "enum Phases.Phase"
+                        },
+                        "id": 7462,
+                        "name": "UserDefinedTypeName",
+                        "src": "626:5:27"
+                      }
+                    ],
+                    "id": 7463,
+                    "name": "VariableDeclaration",
+                    "src": "626:7:27"
+                  }
+                ],
+                "id": 7464,
+                "name": "ParameterList",
+                "src": "625:9:27"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_enum$_Phase_$7460",
+                                  "typeString": "enum Phases.Phase"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7495,
+                              "type": "function (enum Phases.Phase) view",
+                              "value": "checkPhase"
+                            },
+                            "id": 7465,
+                            "name": "Identifier",
+                            "src": "645:10:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7463,
+                              "type": "enum Phases.Phase",
+                              "value": "p"
+                            },
+                            "id": 7466,
+                            "name": "Identifier",
+                            "src": "656:1:27"
+                          }
+                        ],
+                        "id": 7467,
+                        "name": "FunctionCall",
+                        "src": "645:13:27"
+                      }
+                    ],
+                    "id": 7468,
+                    "name": "ExpressionStatement",
+                    "src": "645:13:27"
+                  },
+                  {
+                    "id": 7469,
+                    "name": "PlaceholderStatement",
+                    "src": "668:1:27"
+                  }
+                ],
+                "id": 7470,
+                "name": "Block",
+                "src": "635:41:27"
+              }
+            ],
+            "id": 7471,
+            "name": "ModifierDefinition",
+            "src": "611:65:27"
+          },
+          {
+            "attributes": {
+              "functionSelector": "40b694b5",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "checkPhase",
+              "overrides": null,
+              "scope": 7586,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice checks that the contract's current phase is the expected one\n @param p expected phase"
+                },
+                "id": 7472,
+                "name": "StructuredDocumentation",
+                "src": "682:104:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "p",
+                      "overrides": null,
+                      "scope": 7495,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum Phases.Phase",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Phase",
+                          "referencedDeclaration": 7460,
+                          "type": "enum Phases.Phase"
+                        },
+                        "id": 7473,
+                        "name": "UserDefinedTypeName",
+                        "src": "811:5:27"
+                      }
+                    ],
+                    "id": 7474,
+                    "name": "VariableDeclaration",
+                    "src": "811:7:27"
+                  }
+                ],
+                "id": 7475,
+                "name": "ParameterList",
+                "src": "810:9:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7476,
+                "name": "ParameterList",
+                "src": "832:0:27"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_5321e865e306b55b9f11e92059b2593fc320b1e520f1e33534dfbdbca83b2ff7",
+                                  "typeString": "literal_string \"Different phase than expected\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                -18,
+                                -18
+                              ],
+                              "referencedDeclaration": -18,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 7477,
+                            "name": "Identifier",
+                            "src": "842:7:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint8",
+                                "typeString": "uint8"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    null
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "tryCall": false,
+                                  "type": "uint8",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        null
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "getCurrentPhase",
+                                      "referencedDeclaration": 6768,
+                                      "type": "function () view external returns (uint8)"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "isStructConstructorCall": false,
+                                          "lValueRequested": false,
+                                          "names": [
+                                            null
+                                          ],
+                                          "tryCall": false,
+                                          "type": "contract ImpartialSelectionInterface",
+                                          "type_conversion": true
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": [
+                                                {
+                                                  "typeIdentifier": "t_address",
+                                                  "typeString": "address"
+                                                }
+                                              ],
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 6880,
+                                              "type": "type(contract ImpartialSelectionInterface)",
+                                              "value": "ImpartialSelectionInterface"
+                                            },
+                                            "id": 7478,
+                                            "name": "Identifier",
+                                            "src": "850:27:27"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "isConstant": false,
+                                              "isLValue": false,
+                                              "isPure": false,
+                                              "isStructConstructorCall": false,
+                                              "lValueRequested": false,
+                                              "names": [
+                                                null
+                                              ],
+                                              "tryCall": false,
+                                              "type": "address",
+                                              "type_conversion": true
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": [
+                                                    {
+                                                      "typeIdentifier": "t_contract$_Phases_$7586",
+                                                      "typeString": "library Phases"
+                                                    }
+                                                  ],
+                                                  "isConstant": false,
+                                                  "isLValue": false,
+                                                  "isPure": true,
+                                                  "lValueRequested": false,
+                                                  "type": "type(address)"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "attributes": {
+                                                      "name": "address",
+                                                      "type": null
+                                                    },
+                                                    "id": 7479,
+                                                    "name": "ElementaryTypeName",
+                                                    "src": "878:7:27"
+                                                  }
+                                                ],
+                                                "id": 7480,
+                                                "name": "ElementaryTypeNameExpression",
+                                                "src": "878:7:27"
+                                              },
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "overloadedDeclarations": [
+                                                    null
+                                                  ],
+                                                  "referencedDeclaration": -28,
+                                                  "type": "library Phases",
+                                                  "value": "this"
+                                                },
+                                                "id": 7481,
+                                                "name": "Identifier",
+                                                "src": "886:4:27"
+                                              }
+                                            ],
+                                            "id": 7482,
+                                            "name": "FunctionCall",
+                                            "src": "878:13:27"
+                                          }
+                                        ],
+                                        "id": 7483,
+                                        "name": "FunctionCall",
+                                        "src": "850:42:27"
+                                      }
+                                    ],
+                                    "id": 7484,
+                                    "name": "MemberAccess",
+                                    "src": "850:58:27"
+                                  }
+                                ],
+                                "id": 7485,
+                                "name": "FunctionCall",
+                                "src": "850:60:27"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "tryCall": false,
+                                  "type": "uint8",
+                                  "type_conversion": true
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_enum$_Phase_$7460",
+                                          "typeString": "enum Phases.Phase"
+                                        }
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "type": "type(uint8)"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "name": "uint8",
+                                          "type": null
+                                        },
+                                        "id": 7486,
+                                        "name": "ElementaryTypeName",
+                                        "src": "914:5:27"
+                                      }
+                                    ],
+                                    "id": 7487,
+                                    "name": "ElementaryTypeNameExpression",
+                                    "src": "914:5:27"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 7474,
+                                      "type": "enum Phases.Phase",
+                                      "value": "p"
+                                    },
+                                    "id": 7488,
+                                    "name": "Identifier",
+                                    "src": "920:1:27"
+                                  }
+                                ],
+                                "id": 7489,
+                                "name": "FunctionCall",
+                                "src": "914:8:27"
+                              }
+                            ],
+                            "id": 7490,
+                            "name": "BinaryOperation",
+                            "src": "850:72:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "446966666572656e74207068617365207468616e206578706563746564",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Different phase than expected\"",
+                              "value": "Different phase than expected"
+                            },
+                            "id": 7491,
+                            "name": "Literal",
+                            "src": "924:31:27"
+                          }
+                        ],
+                        "id": 7492,
+                        "name": "FunctionCall",
+                        "src": "842:114:27"
+                      }
+                    ],
+                    "id": 7493,
+                    "name": "ExpressionStatement",
+                    "src": "842:114:27"
+                  }
+                ],
+                "id": 7494,
+                "name": "Block",
+                "src": "832:132:27"
+              }
+            ],
+            "id": 7495,
+            "name": "FunctionDefinition",
+            "src": "791:173:27"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "changePhase",
+              "overrides": null,
+              "scope": 7586,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice updates the current phase of the contract\n @param phase the phase the contract should be put in"
+                },
+                "id": 7496,
+                "name": "StructuredDocumentation",
+                "src": "970:114:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "phase",
+                      "overrides": null,
+                      "scope": 7515,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum Phases.Phase",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Phase",
+                          "referencedDeclaration": 7460,
+                          "type": "enum Phases.Phase"
+                        },
+                        "id": 7497,
+                        "name": "UserDefinedTypeName",
+                        "src": "1110:5:27"
+                      }
+                    ],
+                    "id": 7498,
+                    "name": "VariableDeclaration",
+                    "src": "1110:11:27"
+                  }
+                ],
+                "id": 7499,
+                "name": "ParameterList",
+                "src": "1109:13:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7500,
+                "name": "ParameterList",
+                "src": "1131:0:27"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint8",
+                                  "typeString": "uint8"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "setCurrentPhase",
+                              "referencedDeclaration": 6763,
+                              "type": "function (uint8) external"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "tryCall": false,
+                                  "type": "contract ImpartialSelectionInterface",
+                                  "type_conversion": true
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_address",
+                                          "typeString": "address"
+                                        }
+                                      ],
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 6880,
+                                      "type": "type(contract ImpartialSelectionInterface)",
+                                      "value": "ImpartialSelectionInterface"
+                                    },
+                                    "id": 7501,
+                                    "name": "Identifier",
+                                    "src": "1141:27:27"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "isStructConstructorCall": false,
+                                      "lValueRequested": false,
+                                      "names": [
+                                        null
+                                      ],
+                                      "tryCall": false,
+                                      "type": "address",
+                                      "type_conversion": true
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": [
+                                            {
+                                              "typeIdentifier": "t_contract$_Phases_$7586",
+                                              "typeString": "library Phases"
+                                            }
+                                          ],
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "type": "type(address)"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "name": "address",
+                                              "type": null
+                                            },
+                                            "id": 7502,
+                                            "name": "ElementaryTypeName",
+                                            "src": "1169:7:27"
+                                          }
+                                        ],
+                                        "id": 7503,
+                                        "name": "ElementaryTypeNameExpression",
+                                        "src": "1169:7:27"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": -28,
+                                          "type": "library Phases",
+                                          "value": "this"
+                                        },
+                                        "id": 7504,
+                                        "name": "Identifier",
+                                        "src": "1177:4:27"
+                                      }
+                                    ],
+                                    "id": 7505,
+                                    "name": "FunctionCall",
+                                    "src": "1169:13:27"
+                                  }
+                                ],
+                                "id": 7506,
+                                "name": "FunctionCall",
+                                "src": "1141:42:27"
+                              }
+                            ],
+                            "id": 7507,
+                            "name": "MemberAccess",
+                            "src": "1141:58:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "uint8",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_enum$_Phase_$7460",
+                                      "typeString": "enum Phases.Phase"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(uint8)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "uint8",
+                                      "type": null
+                                    },
+                                    "id": 7508,
+                                    "name": "ElementaryTypeName",
+                                    "src": "1200:5:27"
+                                  }
+                                ],
+                                "id": 7509,
+                                "name": "ElementaryTypeNameExpression",
+                                "src": "1200:5:27"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7498,
+                                  "type": "enum Phases.Phase",
+                                  "value": "phase"
+                                },
+                                "id": 7510,
+                                "name": "Identifier",
+                                "src": "1206:5:27"
+                              }
+                            ],
+                            "id": 7511,
+                            "name": "FunctionCall",
+                            "src": "1200:12:27"
+                          }
+                        ],
+                        "id": 7512,
+                        "name": "FunctionCall",
+                        "src": "1141:72:27"
+                      }
+                    ],
+                    "id": 7513,
+                    "name": "ExpressionStatement",
+                    "src": "1141:72:27"
+                  }
+                ],
+                "id": 7514,
+                "name": "Block",
+                "src": "1131:89:27"
+              }
+            ],
+            "id": 7515,
+            "name": "FunctionDefinition",
+            "src": "1089:131:27"
+          },
+          {
+            "attributes": {
+              "functionSelector": "34b6d081",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "endSubmissionPhase",
+              "overrides": null,
+              "scope": 7586,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice ends submission phase and starts assignment phase"
+                },
+                "id": 7516,
+                "name": "StructuredDocumentation",
+                "src": "1226:61:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7517,
+                "name": "ParameterList",
+                "src": "1319:2:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7522,
+                "name": "ParameterList",
+                "src": "1355:0:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 7471,
+                      "type": "modifier (enum Phases.Phase)",
+                      "value": "check"
+                    },
+                    "id": 7518,
+                    "name": "Identifier",
+                    "src": "1331:5:27"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "member_name": "Submission",
+                      "referencedDeclaration": null,
+                      "type": "enum Phases.Phase"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 7460,
+                          "type": "type(enum Phases.Phase)",
+                          "value": "Phase"
+                        },
+                        "id": 7519,
+                        "name": "Identifier",
+                        "src": "1337:5:27"
+                      }
+                    ],
+                    "id": 7520,
+                    "name": "MemberAccess",
+                    "src": "1337:16:27"
+                  }
+                ],
+                "id": 7521,
+                "name": "ModifierInvocation",
+                "src": "1331:23:27"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_enum$_Phase_$7460",
+                                  "typeString": "enum Phases.Phase"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7515,
+                              "type": "function (enum Phases.Phase)",
+                              "value": "changePhase"
+                            },
+                            "id": 7523,
+                            "name": "Identifier",
+                            "src": "1365:11:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Assignment",
+                              "referencedDeclaration": null,
+                              "type": "enum Phases.Phase"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7460,
+                                  "type": "type(enum Phases.Phase)",
+                                  "value": "Phase"
+                                },
+                                "id": 7524,
+                                "name": "Identifier",
+                                "src": "1377:5:27"
+                              }
+                            ],
+                            "id": 7525,
+                            "name": "MemberAccess",
+                            "src": "1377:16:27"
+                          }
+                        ],
+                        "id": 7526,
+                        "name": "FunctionCall",
+                        "src": "1365:29:27"
+                      }
+                    ],
+                    "id": 7527,
+                    "name": "ExpressionStatement",
+                    "src": "1365:29:27"
+                  }
+                ],
+                "id": 7528,
+                "name": "Block",
+                "src": "1355:46:27"
+              }
+            ],
+            "id": 7529,
+            "name": "FunctionDefinition",
+            "src": "1292:109:27"
+          },
+          {
+            "attributes": {
+              "functionSelector": "965fdd5c",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "endAssignmentPhase",
+              "overrides": null,
+              "scope": 7586,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice ends assignment phase and starts commitment phase"
+                },
+                "id": 7530,
+                "name": "StructuredDocumentation",
+                "src": "1407:61:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7531,
+                "name": "ParameterList",
+                "src": "1500:2:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7536,
+                "name": "ParameterList",
+                "src": "1536:0:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 7471,
+                      "type": "modifier (enum Phases.Phase)",
+                      "value": "check"
+                    },
+                    "id": 7532,
+                    "name": "Identifier",
+                    "src": "1512:5:27"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "member_name": "Assignment",
+                      "referencedDeclaration": null,
+                      "type": "enum Phases.Phase"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 7460,
+                          "type": "type(enum Phases.Phase)",
+                          "value": "Phase"
+                        },
+                        "id": 7533,
+                        "name": "Identifier",
+                        "src": "1518:5:27"
+                      }
+                    ],
+                    "id": 7534,
+                    "name": "MemberAccess",
+                    "src": "1518:16:27"
+                  }
+                ],
+                "id": 7535,
+                "name": "ModifierInvocation",
+                "src": "1512:23:27"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_enum$_Phase_$7460",
+                                  "typeString": "enum Phases.Phase"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7515,
+                              "type": "function (enum Phases.Phase)",
+                              "value": "changePhase"
+                            },
+                            "id": 7537,
+                            "name": "Identifier",
+                            "src": "1546:11:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Commitment",
+                              "referencedDeclaration": null,
+                              "type": "enum Phases.Phase"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7460,
+                                  "type": "type(enum Phases.Phase)",
+                                  "value": "Phase"
+                                },
+                                "id": 7538,
+                                "name": "Identifier",
+                                "src": "1558:5:27"
+                              }
+                            ],
+                            "id": 7539,
+                            "name": "MemberAccess",
+                            "src": "1558:16:27"
+                          }
+                        ],
+                        "id": 7540,
+                        "name": "FunctionCall",
+                        "src": "1546:29:27"
+                      }
+                    ],
+                    "id": 7541,
+                    "name": "ExpressionStatement",
+                    "src": "1546:29:27"
+                  }
+                ],
+                "id": 7542,
+                "name": "Block",
+                "src": "1536:46:27"
+              }
+            ],
+            "id": 7543,
+            "name": "FunctionDefinition",
+            "src": "1473:109:27"
+          },
+          {
+            "attributes": {
+              "functionSelector": "58b3476a",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "endCommitmentPhase",
+              "overrides": null,
+              "scope": 7586,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice ends commitment phase and starts reveal phase"
+                },
+                "id": 7544,
+                "name": "StructuredDocumentation",
+                "src": "1588:57:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7545,
+                "name": "ParameterList",
+                "src": "1677:2:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7550,
+                "name": "ParameterList",
+                "src": "1712:0:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 7471,
+                      "type": "modifier (enum Phases.Phase)",
+                      "value": "check"
+                    },
+                    "id": 7546,
+                    "name": "Identifier",
+                    "src": "1689:5:27"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "member_name": "Commitment",
+                      "referencedDeclaration": null,
+                      "type": "enum Phases.Phase"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 7460,
+                          "type": "type(enum Phases.Phase)",
+                          "value": "Phase"
+                        },
+                        "id": 7547,
+                        "name": "Identifier",
+                        "src": "1695:5:27"
+                      }
+                    ],
+                    "id": 7548,
+                    "name": "MemberAccess",
+                    "src": "1695:16:27"
+                  }
+                ],
+                "id": 7549,
+                "name": "ModifierInvocation",
+                "src": "1689:23:27"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_enum$_Phase_$7460",
+                                  "typeString": "enum Phases.Phase"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7515,
+                              "type": "function (enum Phases.Phase)",
+                              "value": "changePhase"
+                            },
+                            "id": 7551,
+                            "name": "Identifier",
+                            "src": "1722:11:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Reveal",
+                              "referencedDeclaration": null,
+                              "type": "enum Phases.Phase"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7460,
+                                  "type": "type(enum Phases.Phase)",
+                                  "value": "Phase"
+                                },
+                                "id": 7552,
+                                "name": "Identifier",
+                                "src": "1734:5:27"
+                              }
+                            ],
+                            "id": 7553,
+                            "name": "MemberAccess",
+                            "src": "1734:12:27"
+                          }
+                        ],
+                        "id": 7554,
+                        "name": "FunctionCall",
+                        "src": "1722:25:27"
+                      }
+                    ],
+                    "id": 7555,
+                    "name": "ExpressionStatement",
+                    "src": "1722:25:27"
+                  }
+                ],
+                "id": 7556,
+                "name": "Block",
+                "src": "1712:42:27"
+              }
+            ],
+            "id": 7557,
+            "name": "FunctionDefinition",
+            "src": "1650:104:27"
+          },
+          {
+            "attributes": {
+              "functionSelector": "afbde963",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "endRevealPhase",
+              "overrides": null,
+              "scope": 7586,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice ends reveal phase and starts selection phase"
+                },
+                "id": 7558,
+                "name": "StructuredDocumentation",
+                "src": "1760:56:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7559,
+                "name": "ParameterList",
+                "src": "1844:2:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7564,
+                "name": "ParameterList",
+                "src": "1875:0:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 7471,
+                      "type": "modifier (enum Phases.Phase)",
+                      "value": "check"
+                    },
+                    "id": 7560,
+                    "name": "Identifier",
+                    "src": "1856:5:27"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "member_name": "Reveal",
+                      "referencedDeclaration": null,
+                      "type": "enum Phases.Phase"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 7460,
+                          "type": "type(enum Phases.Phase)",
+                          "value": "Phase"
+                        },
+                        "id": 7561,
+                        "name": "Identifier",
+                        "src": "1862:5:27"
+                      }
+                    ],
+                    "id": 7562,
+                    "name": "MemberAccess",
+                    "src": "1862:12:27"
+                  }
+                ],
+                "id": 7563,
+                "name": "ModifierInvocation",
+                "src": "1856:19:27"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_enum$_Phase_$7460",
+                                  "typeString": "enum Phases.Phase"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7515,
+                              "type": "function (enum Phases.Phase)",
+                              "value": "changePhase"
+                            },
+                            "id": 7565,
+                            "name": "Identifier",
+                            "src": "1885:11:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Selection",
+                              "referencedDeclaration": null,
+                              "type": "enum Phases.Phase"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7460,
+                                  "type": "type(enum Phases.Phase)",
+                                  "value": "Phase"
+                                },
+                                "id": 7566,
+                                "name": "Identifier",
+                                "src": "1897:5:27"
+                              }
+                            ],
+                            "id": 7567,
+                            "name": "MemberAccess",
+                            "src": "1897:15:27"
+                          }
+                        ],
+                        "id": 7568,
+                        "name": "FunctionCall",
+                        "src": "1885:28:27"
+                      }
+                    ],
+                    "id": 7569,
+                    "name": "ExpressionStatement",
+                    "src": "1885:28:27"
+                  }
+                ],
+                "id": 7570,
+                "name": "Block",
+                "src": "1875:45:27"
+              }
+            ],
+            "id": 7571,
+            "name": "FunctionDefinition",
+            "src": "1821:99:27"
+          },
+          {
+            "attributes": {
+              "functionSelector": "f7ad24d1",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "endSelectionPhase",
+              "overrides": null,
+              "scope": 7586,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice ends selection phase and starts completed phase"
+                },
+                "id": 7572,
+                "name": "StructuredDocumentation",
+                "src": "1926:59:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7573,
+                "name": "ParameterList",
+                "src": "2016:2:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7578,
+                "name": "ParameterList",
+                "src": "2051:0:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 7471,
+                      "type": "modifier (enum Phases.Phase)",
+                      "value": "check"
+                    },
+                    "id": 7574,
+                    "name": "Identifier",
+                    "src": "2028:5:27"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "member_name": "Selection",
+                      "referencedDeclaration": null,
+                      "type": "enum Phases.Phase"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 7460,
+                          "type": "type(enum Phases.Phase)",
+                          "value": "Phase"
+                        },
+                        "id": 7575,
+                        "name": "Identifier",
+                        "src": "2034:5:27"
+                      }
+                    ],
+                    "id": 7576,
+                    "name": "MemberAccess",
+                    "src": "2034:15:27"
+                  }
+                ],
+                "id": 7577,
+                "name": "ModifierInvocation",
+                "src": "2028:22:27"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_enum$_Phase_$7460",
+                                  "typeString": "enum Phases.Phase"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7515,
+                              "type": "function (enum Phases.Phase)",
+                              "value": "changePhase"
+                            },
+                            "id": 7579,
+                            "name": "Identifier",
+                            "src": "2061:11:27"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Completed",
+                              "referencedDeclaration": null,
+                              "type": "enum Phases.Phase"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7460,
+                                  "type": "type(enum Phases.Phase)",
+                                  "value": "Phase"
+                                },
+                                "id": 7580,
+                                "name": "Identifier",
+                                "src": "2073:5:27"
+                              }
+                            ],
+                            "id": 7581,
+                            "name": "MemberAccess",
+                            "src": "2073:15:27"
+                          }
+                        ],
+                        "id": 7582,
+                        "name": "FunctionCall",
+                        "src": "2061:28:27"
+                      }
+                    ],
+                    "id": 7583,
+                    "name": "ExpressionStatement",
+                    "src": "2061:28:27"
+                  }
+                ],
+                "id": 7584,
+                "name": "Block",
+                "src": "2051:45:27"
+              }
+            ],
+            "id": 7585,
+            "name": "FunctionDefinition",
+            "src": "1990:106:27"
+          }
+        ],
+        "id": 7586,
+        "name": "ContractDefinition",
+        "src": "248:1850:27"
+      }
+    ],
+    "id": 7587,
+    "name": "SourceUnit",
+    "src": "33:2065:27"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x49593B19119AB4272db2236851BADe404c4A5C68",
+      "transactionHash": "0xb58596aac5f7756625ea31355d07a70c3e94bc0645238e149b5784abda994fad"
+    }
+  },
+  "schemaVersion": "3.4.8",
+  "updatedAt": "2022-09-18T09:39:15.210Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "author": "Giovanni Rescinito",
+    "kind": "dev",
+    "methods": {
+      "checkPhase(Phases.Phase)": {
+        "params": {
+          "p": "expected phase"
+        }
+      }
+    },
+    "title": "Execution Phases",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "checkPhase(Phases.Phase)": {
+        "notice": "checks that the contract's current phase is the expected one"
+      },
+      "endAssignmentPhase()": {
+        "notice": "ends assignment phase and starts commitment phase"
+      },
+      "endCommitmentPhase()": {
+        "notice": "ends commitment phase and starts reveal phase"
+      },
+      "endRevealPhase()": {
+        "notice": "ends reveal phase and starts selection phase"
+      },
+      "endSelectionPhase()": {
+        "notice": "ends selection phase and starts completed phase"
+      },
+      "endSubmissionPhase()": {
+        "notice": "ends submission phase and starts assignment phase"
+      }
+    },
+    "notice": "phases occurring the system execution",
+    "version": 1
+  }
+}
